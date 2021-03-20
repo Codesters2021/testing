@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <title>Diagrams</title>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+</body>
+
+</html>
+
+<script>
+    function renderChart(health_data) {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light2",
+            title: {
+                text: "Your health stats"
+            },
+            data: [{
+                type: "line",
+                indexLabelFontSize: 16,
+                dataPoints: health_data
+            }]
+        });
+        chart.render();
+    }
+    fetch('https://api.js-on.de/health/1')
+        .then(response => response.json())
+        .then(data => renderChart(data.health_data));
+</script>
