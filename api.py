@@ -4,6 +4,7 @@ import connexion
 from random import choice
 from quotes import QUOTES
 import random
+import json
 
 def get_quote():
     return {
@@ -16,6 +17,18 @@ def get_health(uid: int):
         data.append({'y': random.randrange(1, 5)})
     return {
         "health_data": data
+    }
+
+def index():
+    return {
+        "status": "It works!"
+    }#
+
+def get_random_recipe():
+    recipe = random.choice(json.loads(open("Recipes.json", "r").read()))
+    return {
+        "name": recipe["name"],
+        "health_score": recipe["health_score"]
     }
 
 if __name__ == '__main__':

@@ -10,6 +10,13 @@ produces:
 basePath: /
 
 paths:
+  /:
+    get:
+      summary: It works
+      operationId: api.index
+      responses:
+        '200':
+          description: It works
   /quote:
     get:
       summary: Get random quote
@@ -17,6 +24,26 @@ paths:
       responses:
         '200':
           description: random quote
+  /recipe:
+    get:
+      summary: Get random recipe
+      operationId: api.get_random_recipe
+      responses:
+        '200':
+          description: random recipe
+  /user/{uid}:
+    get:
+      summary: Get user information
+      operationId: db.get_user_information
+      parameters:
+        - in: path
+          name: uid
+          type: integer
+          required: true
+          description: User ID
+      responses:
+        '200':
+          description: Object with user data
   /health/{uid}:
     get:
       summary: Get health data

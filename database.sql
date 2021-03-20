@@ -1,10 +1,13 @@
-CREATE DATABASE `user-1`;
+CREATE DATABASE `js-on`;
+/* DONE */
 CREATE TABLE clock(
     timestamp INTEGER NOT NULL,
     state BOOLEAN NOT NULL
 )
 
+/* DONE */
 CREATE TABLE food(
+    `time` INTEGER NOT NULL,
     `meal_id` INTEGER NOT NULL
 )
 
@@ -19,11 +22,12 @@ CREATE TABLE calendar(
 
 CREATE TABLE notifications(
     `date` INTEGER NOT NULL,
-    `from` TEXT NOT NULL,
+    `sender` TEXT NOT NULL,
     `subject` TEXT NOT NULL,
     `content` TEXT NOT NULL
 )
 
+/* DONE */
 CREATE DATABASE `settings`;
 CREATE TABLE user(
     `user_id` INTEGER NOT NULL UNIQUE,
@@ -43,3 +47,4 @@ CREATE TABLE meals(
     `description` TEXT NOT NULL,
     `allergics` TEXT NOT NULL,
 )
+
