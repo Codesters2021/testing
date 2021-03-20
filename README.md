@@ -9,8 +9,12 @@ Access the (provisional) WebApp at: https://test.js-on.de/
 
 Self explanatory, as there are no functionalities yet **lol**
 
+## Database running MySQL (MariaDB)
+Currently only 1 user existing with uid 1!!!
+
 
 ## API Docs
 * https://api.js-on.de/recipe - get random recipe (description and health_score to choose for cooking (cantina))
 * https://api.js-on.de/quote - get random motivational (hopefully ...) quote
 * https://api.js-on.de/health/{uid} - get health stats for user with uid = integer (not restricted yet as time's running :| )
+* https://api.js-on.de/user/1 - get user information (mail, avatar path (should be link obviously...), name, phone and joke account :D)
