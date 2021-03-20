@@ -8,3 +8,9 @@ If you're lucky I'll provide some documentation later. Maybe not. Depends on how
 Access the (provisional) WebApp at: https://test.js-on.de/
 
 Self explanatory, as there are no functionalities yet **lol**
+
+
+## API Docs
+* https://api.js-on.de/recipe - get random recipe (description and health_score to choose for cooking (cantina))
+* https://api.js-on.de/quote - get random motivational (hopefully ...) quote
+* https://api.js-on.de/health/{uid} - get health stats for user with uid = integer (not restricted yet as time's running :| )
